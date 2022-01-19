@@ -1,10 +1,11 @@
-﻿@{
+﻿@using K205_Portfolio.Models
+@*@{
     string ad = "Aytac";
     string soyad = "Rustemli";
     string gun = "axsam";
 }
 
-
+*@
 @*<h1>
     @{
         if (gun == "axsam")
@@ -17,4 +18,11 @@
 </h1>*@
 
 
-@ViewBag.Salamlama @ad
+@*@ViewBag.Salamlama @ad*@
+
+
+@foreach (var item in ViewData["products"] as List<Product>)
+{
+    <h1>@item.Name</h1>
+    <img width="300" src="@item.PhotoURL" />
+}
