@@ -13,8 +13,10 @@ app.MapControllerRoute(
 
 app.MapRazorPages();
 
+app.UseStaticFiles();
+
+
 app.Run();
 
 
 
-// ctrl + shift + b
